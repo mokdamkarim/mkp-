@@ -1,0 +1,346 @@
+
+
+
+:root {
+    --color-qi-emerald: #00E676; 
+    --color-qi-cyan: #00BFA5;
+    --color-qi-dark: #002B24;
+    --qi-gradient: linear-gradient(135deg, var(--color-gold) 0%, var(--color-qi-cyan) 100%);
+    --qi-glow: 0 10px 30px rgba(0, 191, 165, 0.2);
+}
+
+
+.qi-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.qi-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.qi-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.qi-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(to bottom, rgba(16, 23, 30, 0.4) 0%, rgba(16, 23, 30, 0.9) 100%),
+                linear-gradient(to right, rgba(0, 43, 36, 0.4) 0%, rgba(16, 23, 30, 0.4) 100%);
+    z-index: -1;
+}
+
+.qi-hero-content {
+    text-align: center;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.qi-badge {
+    background: rgba(0, 191, 165, 0.1);
+    border-color: rgba(0, 191, 165, 0.3);
+    color: var(--color-qi-cyan);
+}
+
+.qi-hero-title {
+    background: var(--qi-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none; 
+}
+
+.qi-btn {
+    background: var(--qi-gradient);
+    color: var(--color-white);
+    box-shadow: var(--qi-glow);
+    border: none;
+}
+
+.qi-btn:hover {
+    box-shadow: 0 15px 40px rgba(0, 191, 165, 0.4);
+    transform: translateY(-3px);
+}
+
+.qi-mouse {
+    border-color: var(--color-qi-cyan);
+}
+.qi-mouse::before {
+    background-color: var(--color-qi-cyan);
+}
+
+
+.qi-partnership-section {
+    padding: 100px 0;
+    background-color: var(--color-bg-deep);
+    position: relative;
+}
+
+.qi-partnership-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(0, 191, 165, 0.03), transparent 40%),
+                radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.03), transparent 40%);
+    pointer-events: none;
+}
+
+.qi-partnership-card {
+    padding: 60px 40px;
+    border-radius: 20px;
+    background: rgba(20, 28, 36, 0.6);
+    border: 1px solid rgba(0, 191, 165, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.qi-logos-merge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.qi-merge-logo {
+    height: 80px;
+    object-fit: contain;
+}
+
+.q-logo-placeholder {
+    width: 80px;
+    border-radius: 50%;
+    background: var(--color-qi-emerald);
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.qi-x-divider {
+    font-size: 2rem;
+    color: var(--color-gray);
+    font-weight: 300;
+}
+
+.qi-part-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.qi-line {
+    background: var(--qi-gradient);
+}
+
+.qi-text-content {
+    max-width: 900px;
+    margin: 40px auto 0;
+    text-align: right;
+}
+
+.qi-text-content p {
+    color: var(--color-light);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+
+.qi-form-section {
+    padding: 50px 0 100px;
+    background-color: var(--color-bg-deep);
+}
+
+.qi-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 20px;
+    background: rgba(20, 28, 36, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.qi-form-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.qi-subtitle {
+    color: var(--color-qi-cyan);
+    letter-spacing: 2px;
+}
+
+.qi-form-title {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.qi-form-subtitle {
+    text-align: center;
+    color: var(--color-gray);
+    margin-bottom: 40px;
+}
+
+.qi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.qi-input-group label {
+    color: var(--color-light);
+    font-weight: 500;
+}
+
+.qi-input-group input {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.qi-input-group input:focus {
+    border-color: var(--color-qi-cyan);
+    box-shadow: 0 0 10px rgba(0, 191, 165, 0.1);
+}
+
+.qi-submit-btn {
+    margin-top: 10px;
+    background: var(--qi-gradient);
+    box-shadow: var(--qi-glow);
+    border: none;
+}
+
+.qi-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 191, 165, 0.3);
+}
+
+
+.qi-state-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
+.qi-state-hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    text-align: center;
+    padding: 40px 0;
+}
+
+
+.qi-success-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: var(--color-qi-emerald);
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-svg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: var(--color-white);
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px var(--color-qi-emerald);
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 50px var(--color-qi-emerald);
+    }
+}
+
+.qi-success-title {
+    color: var(--color-white);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.qi-success-desc {
+    color: var(--color-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+    .qi-partnership-card {
+        padding: 40px 20px;
+    }
+    .qi-form-wrapper {
+        padding: 40px 20px;
+    }
+    .qi-logos-merge {
+        gap: 15px;
+    }
+    .qi-merge-logo, .q-logo-placeholder {
+        height: 60px;
+        width: 60px;
+    }
+    .qi-x-divider {
+        font-size: 1.5rem;
+    }
+    .qi-part-title {
+        font-size: 1.8rem;
+    }
+}
