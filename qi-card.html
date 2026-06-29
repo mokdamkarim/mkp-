@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./assets/images/icon.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="مقدام كريم بلص - ريادة العقار والاستثمار في العراق. نجمع بين الرصانة الاستثمارية والابتكار المعاصر لنصنع معايير جديدة للثقة والتميز." />
+    <meta name="theme-color" content="#10171e" />
+    <title>مقدام كريم بلص × كي كارد</title>
+
+    
+    <script>
+        document.addEventListener('gesturestart', function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener('gesturechange', function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener('gestureend', function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener('touchmove', function(e) {
+            if (e.touches && e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    </script>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    
+    <canvas id="interactive-particles" class="interactive-particles-canvas"></canvas>
+
+    
+    <div class="cursor-plus" id="cursor-outline"></div>
+
+    
+    <button id="back-to-top" class="back-to-top-btn magnetic-target" data-magnet-speed="0.3" aria-label="العودة إلى الأعلى">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    
+    <div id="preloader" class="preloader-container">
+        <div class="preloader-curtain-deep"></div>
+        <div class="preloader-curtain-accent"></div>
+        <div class="preloader-main-black-bg">
+            <div class="preloader-content">
+                <div class="logo-wrapper">
+                    <img src="./assets/images/1.webp" alt="Mokdam Karim Plus Logo" class="preloader-logo" />
+                </div>
+                <div class="loading-text-container">
+                    <span class="loading-text">رؤية موطنك القادم</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="preloader-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="page-outro" class="page-outro-container">
+        <div class="outro-curtain-deep"></div>
+        <div class="outro-curtain-accent"></div>
+        <div class="outro-curtain-black"></div>
+    </div>
+
+    
+    <div class="premium-scroll-indicator">
+        <div class="scroll-track">
+            <div class="scroll-fill" id="scroll-fill"></div>
+        </div>
+        <div class="scroll-percentage" id="scroll-percentage">00</div>
+    </div>
+
+    
+    <div id="app-container" class="app-container" style="opacity: 0;">
+        
+        <nav id="navbar" class="navbar">
+            <div class="container nav-container">
+                <div class="nav-logo magnetic-target" data-magnet-speed="0.2">
+                    <div class="logo-glow-sm">
+                        <img src="./assets/images/1.webp" alt="Mokdam Karim Plus Logo" class="logo-img" />
+                    </div>
+                    <span class="logo-text">مقدام كريم بلص</span>
+                </div>
+
+                <div class="nav-links desktop-only">
+                    <a href="./" class="magnetic-target" data-magnet-speed="0.3" id="nav-home-btn">الرئيسية</a>
+                    <a href="qi-card" class="nav-link-active magnetic-target" data-magnet-speed="0.3">كي</a>
+                    <a href="hotel-apartments" class="magnetic-target" data-magnet-speed="0.3">الشقق الفندقية</a>
+                    <a href="lands" class="magnetic-target" data-magnet-speed="0.3">الأراضي</a>
+                    <a href="tel:+9647750008841" class="nav-contact-btn nav-call-icon magnetic-target" data-magnet-speed="0.4" aria-label="اتصل بنا">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                
+                <div class="mobile-header-actions">
+                    <a href="tel:+9647750008841" class="nav-contact-btn nav-call-icon" aria-label="اتصل بنا">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                
+                <button id="hamburger-btn" class="hamburger-btn magnetic-target" data-magnet-speed="0.4" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        
+        <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <div class="menu-links-container">
+                    <a href="./" class="mobile-link" style="--i: 1;" id="mob-home-btn">الرئيسية</a>
+                    <a href="qi-card" class="mobile-link nav-link-active" style="--i: 2;">كي</a>
+                    <a href="hotel-apartments" class="mobile-link" style="--i: 3;">الشقق الفندقية</a>
+                    <a href="lands" class="mobile-link" style="--i: 4;">الأراضي</a>
+                </div>
+            </div>
+        </div>
+
+        <main class="page-qi-card">
+            
+            <section id="partnership" class="partnership-section" style="padding-top: 150px;">
+                <div class="checkerboard-pattern top-divider" style="top: 150px;"></div>
+                <div class="container partnership-container-grid qi-hero-grid">
+
+                    <div class="partnership-visual interactive-3d-cards">
+                        <div class="visual-wrapper">
+                            <div class="neon-glow-bg"></div>
+                            <div class="glass-frame lux-frame">
+                                <img src="./assets/images/تعاون كي.webp" alt="Qasitha Wi Qi" class="q-symbol" />
+                            </div>
+                            <div class="slogan-badge-wrapper">
+                                <div class="slogan-badge magnetic-target" data-magnet-speed="0.3">
+                                    <span>راتبك..</span>
+                                    <span class="highlight accent-color-qi">(يبنيلك وطن)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="partnership-side-ar">
+                        <div class="brand-badge-ar">التعاون الاستراتيجي</div>
+                        <h3 class="partner-ar-title">
+                            <span class="accent-color-qi">+</span> نظام التملك الرقمي الأول بالعراق
+                        </h3>
+                        <div class="cta-wrap-ar">
+                            <a href="#qi-form" class="cta-button-gold magnetic-target" data-magnet-speed="0.2">أحجز موعدك الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="container ijaza-container">
+                    <div class="ijaza-card glass-panel-lux">
+                        <div class="ijaza-header">
+                            <h2 class="ijaza-brand-title">
+                                <span class="miqdam-text">مقدام كريم بلص</span>
+                                <span class="plus-icon">+</span>
+                                <span class="qi-text">كي كارد</span>
+                            </h2>
+                            <div class="title-underline center-line qi-line" style="margin-bottom: 40px;"></div>
+                        </div>
+                        
+                        <div class="ijaza-bilingual-grid">
+                            
+                            <div class="ijaza-text-box mockup-card magnetic-target ar" data-magnet-speed="0.1">
+                                <div class="ijaza-box-icon">
+                                    <span style="font-size: 3rem; font-weight: 900; color: var(--color-accent-qi); line-height: 1;">+</span>
+                                </div>
+                                <h3 style="font-size: 1.5rem; color: var(--color-white); margin-bottom: 15px;">الشراكة الاستراتيجية</h3>
+                                <p class="ijaza-text">
+                                    بموجب محضر التعاون الاستراتيجي المبرم، نعلن رسمياً عن إطلاق المنظومة الرقمية المشتركة لتسهيل تملك الأراضي السكنية المضمونة والجاهزة للبناء.
+                                    إن هذا التعاون صُمم خصيصاً لتمكين الكوادر والمواطنين من تحويل ودائعهم إلى أصول عينية صلبة. نوفر بوابات تقسيط رقمية عبر الرواتب الموطنة مباشرة، بدون فوائد وبدون كفيل، مع النقل الفوري لسندات الملكية (الطابو).
+                                </p>
+                                <p class="ijaza-text highlight-quote" style="margin-top: 20px; font-weight: bold; color: var(--color-accent-qi);">
+                                    خياراتكم اليوم هي حجر الأساس لاستقرار الغد، وكارتك هو ضمانك.
+                                </p>
+                            </div>
+
+                            
+                            <div class="ijaza-text-box mockup-card magnetic-target en" data-magnet-speed="0.1" dir="ltr" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; -webkit-tap-highlight-color: transparent;">
+                                <div class="ijaza-box-icon" style="justify-content: flex-start; width: 100%;">
+                                    <span style="font-size: 3rem; font-weight: 900; color: var(--color-accent-qi); line-height: 1; letter-spacing: 2px;">Qi</span>
+                                </div>
+                                <h3 style="font-size: 1.5rem; color: var(--color-white); margin-bottom: 15px; text-align: left; direction: ltr; width: 100%;">Strategic Partnership</h3>
+                                <div class="en-text-wrapper" style="text-align: left; direction: ltr; width: 100%;">
+                                    <p class="ijaza-text" style="text-align: left !important; direction: ltr !important; display: block; width: 100%;">
+                                        Under the strategic cooperation agreement, we officially announce the launch of the joint digital ecosystem to facilitate the ownership of guaranteed residential plots.
+                                        This collaboration empowers citizens to transform deposits into solid real estate assets. We provide secure digital installment gateways directly through domiciled salaries, zero interest, no guarantor required, with immediate transfer of title deeds.
+                                    </p>
+                                    <p class="ijaza-text highlight-quote" style="margin-top: 20px; font-weight: bold; color: var(--color-accent-qi); text-align: left !important; direction: ltr !important; display: block; width: 100%;">
+                                        Your choices today are the cornerstone of tomorrow's stability.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ijaza-stamp">
+                            <div class="stamp-circle"></div>
+                            <div class="stamp-text">مقدام<br>كريم</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkerboard-pattern bottom-divider"></div>
+            </section>
+
+
+            
+            <section id="qi-form" class="qi-form-section">
+                <div class="container">
+                    <div class="contact-form-wrapper glass-panel" style="max-width: 600px; margin: 0 auto;">
+                        <h3 class="form-title" id="contact-form-title">أحجز موعدك</h3>
+                        <form id="qi-registration-form" class="luxury-form">
+                            <div class="form-group">
+                                <label for="qi-name">الاسم الكامل</label>
+                                <input type="text" id="qi-name" placeholder="أدخل اسمك الكامل" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="qi-phone">رقم الهاتف</label>
+                                <input type="tel" id="qi-phone" placeholder="أدخل رقم الهاتف" required dir="rtl" />
+                            </div>
+                            <button type="submit" class="submit-btn-lux submit-btn-qi magnetic-target" data-magnet-speed="0.2">
+                                <span>أحجز الآن</span>
+                            </button>
+                        </form>
+
+                        
+                        <div id="qi-success-state" class="success-state-container" style="display: none; opacity: 0;">
+                            <div class="success-content">
+                                <svg class="success-checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                    <circle class="success-checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                                    <path class="success-checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                </svg>
+                                <p class="success-message">
+                                    نتمنى لك يوم سعيد.<br>
+                                    فريق مقدام كريم بلص سوف يتواصل معك بأقل من 24 ساعة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        
+        <footer id="contact" class="site-footer">
+            <div class="footer-gradient-top"></div>
+
+            <div class="liquid-glass-container">
+                <div class="liquid-blob blob-1"></div>
+                <div class="liquid-blob blob-2"></div>
+                <div class="liquid-blob blob-3"></div>
+                <div class="liquid-glass-overlay"></div>
+            </div>
+
+            <div class="container contact-section">
+                
+                <div class="contact-header-container">
+                    <div class="contact-header-ar">
+                        <h2 class="section-title split-words" id="contact-section-title">دعنا نبدأ المستقبل معاً</h2>
+                        <div class="title-underline"></div>
+                        <p class="contact-subtitle split-lines" id="contact-section-desc">تواصل مع نخبة الخبراء العقاريين في مقدام كريم بلص لنبدأ رحلتك الاستثمارية بثقة.</p>
+                    </div>
+                    <div class="contact-header-en">
+                        <h2 class="section-title en-text split-words" id="contact-section-title-en">Let's Build the Future Together</h2>
+                        <div class="title-underline-en"></div>
+                        <p class="en-text en-body-lux contact-subtitle-en split-lines">Connect with our elite real estate experts at Mokdam Karim Plus to start your investment journey with confidence.</p>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    
+                    <div class="contact-form-wrapper glass-panel" id="main-form-panel">
+                        <h3 class="form-title" id="main-form-title">أرسل رسالتك</h3>
+                        <form id="main-contact-form" class="luxury-form">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل</label>
+                                <input type="text" id="name" placeholder="أدخل اسمك الكامل" required />
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">رقم الهاتف</label>
+                                    <input type="tel" id="phone" placeholder="أدخل رقم الهاتف" required dir="rtl" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">البريد الإلكتروني</label>
+                                    <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">رسالتك</label>
+                                <textarea id="message" rows="1" placeholder="كيف يمكننا مساعدتك؟" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn-lux magnetic-target" data-magnet-speed="0.2">
+                                <span>إرسال الطلب</span>
+                            </button>
+                        </form>
+
+                        
+                        <div id="form-success-state" class="success-state-container" style="display: none; opacity: 0;">
+                            <div class="success-content">
+                                <svg class="success-checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                    <circle class="success-checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                                    <path class="success-checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                </svg>
+                                <p class="success-message">
+                                    نتمنى لك يوم سعيد.<br>
+                                    فريق مقدام كريم بلص سوف يتواصل معك بأقل من 24 ساعة.
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    
+                    <div class="contact-info-wrapper">
+                        <div class="info-cards">
+                            <div class="info-card glass-panel">
+                                <a href="mailto:info@mokdamkarimplus.com" class="info-icon magnetic-target" data-magnet-speed="0.4" aria-label="أرسل إيميل">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </a>
+                                <div class="info-text">
+                                    <h4>راسلنا</h4>
+                                    <p>info@mokdamkarimplus.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-glass-card glass-panel">
+                            <div class="map-header">
+                                <h4>مقر الشركة</h4>
+                                <p>بغداد - شارع الزيتون (Al-Zaytoon St)</p>
+                            </div>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3334.272642956703!2d44.37281668480436!3d33.311686980813874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDE4JzQyLjEiTiA0NMKwMjInMTQuMyJF!5e0!3m2!1sar!2siq!4v1781691733995!5m2!1sar!2siq"
+                                    width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mokdam Karim Plus Location"></iframe>
+                                <a href="https://www.google.com/maps/place/33%C2%B018'42.1%22N+44%C2%B022'14.3%22E/@33.3116869,44.3728166,17z/" target="_blank" rel="noreferrer" class="map-overlay">
+                                    <div class="map-hover-content">
+                                        <div class="hover-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                        </div>
+                                        <span>فتح في خرائط جوجل</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="container footer-container">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-glow-wrapper">
+                            <img src="./assets/images/1.webp" alt="Mokdam Karim Plus Logo" class="logo-img-large" />
+                        </div>
+                        <div class="brand-titles">
+                            <h3>مقدام كريم بلص</h3>
+                            <span class="brand-subtitle">MOKDAM KARIM PLUS</span>
+                        </div>
+                    </div>
+                    
+                    <p class="brand-desc">ريادة العقار والاستثمار في العراق. نجمع بين الرصانة الاستثمارية والابتكار المعاصر لنصنع معايير جديدة للثقة والتميز.</p>
+                    <div class="social-links-lux">
+                        <a href="https://www.tiktok.com/@moqdam_karim" target="_blank" rel="noreferrer" class="social-icon-lux tiktok magnetic-target" data-magnet-speed="0.3">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/moqdam_plus/" target="_blank" rel="noreferrer" class="social-icon-lux instagram magnetic-target" data-magnet-speed="0.3">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.85 3.89 2.3 7.15 2.15c1.27-.06 1.65-.07 4.85-.07m0-2.16C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.35 2.63 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.63-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm5.8-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61575365395868&locale=ar_AR" target="_blank" rel="noreferrer" class="social-icon-lux facebook magnetic-target" data-magnet-speed="0.3">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.67 0H1.33C.6 0 0 .6 0 1.33v21.34C0 23.4.6 24 1.33 24h11.49V14.7h-3.15v-3.64h3.15V8.41c0-3.1 1.89-4.8 4.66-4.8 1.33 0 2.47.1 2.8.14v3.24h-1.92c-1.5 0-1.8.71-1.8 1.76v2.31h3.6l-.47 3.64h-3.13V24h6.12c.73 0 1.33-.6 1.33-1.33V1.33C24 .6 23.4 0 22.67 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links-lux">
+                    <h4 class="footer-heading-lux">روابط سريعة</h4>
+                    <div class="footer-title-underline"></div>
+                    <ul>
+                        <li><a href="./" class="quick-link magnetic-target" data-magnet-speed="0.2">الرئيسية</a></li>
+                        <li><a href="./" class="quick-link magnetic-target" data-magnet-speed="0.2">الشركة</a></li>
+                        <li><a href="./" class="quick-link magnetic-target" data-magnet-speed="0.2">الخدمات المتقدمة</a></li>
+                        <li><a href="./" class="quick-link magnetic-target" data-magnet-speed="0.2">كي</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-lux">
+                    <h4 class="footer-heading-lux">خدماتنا</h4>
+                    <div class="footer-title-underline"></div>
+                    <ul>
+                        <li><a href="index.html#service-consulting" class="quick-link magnetic-target" data-magnet-speed="0.2">الاستشارات العقارية</a></li>
+                        <li><a href="index.html#service-management" class="quick-link magnetic-target" data-magnet-speed="0.2">إدارة الأصول</a></li>
+                        <li><a href="index.html#service-engineering" class="quick-link magnetic-target" data-magnet-speed="0.2">المخططات الهندسية</a></li>
+                        <li><a href="index.html#service-marketing" class="quick-link magnetic-target" data-magnet-speed="0.2">الفرص الاستثمارية</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-lux">
+                <div class="container bottom-container" style="justify-content: space-between;">
+                    <div class="copyright-dummy-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;margin-left:6px;vertical-align:-4px;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M15 9.354a4 4 0 1 0 0 5.292"></path>
+                        </svg>
+                        مقدام كريم بلص. جميع الحقوق محفوظة.
+                    </div>
+                    <div class="bottom-links">
+                        <a href="privacy-policy" class="magnetic-target" data-magnet-speed="0.2">سياسة الخصوصية</a>
+                        <span class="dot"></span>
+                        <a href="terms-and-conditions" class="magnetic-target" data-magnet-speed="0.2">الشروط والأحكام</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    
+    <div id="contact-modal" class="modal-overlay liquid-glass-overlay-modal" style="display: none;">
+        <div class="liquid-blob blob-1-modal"></div>
+        <div class="liquid-blob blob-2-modal"></div>
+        <div class="liquid-blob blob-3-modal"></div>
+
+        <div class="modal-content glass-panel-modal">
+            <button id="close-modal-btn" class="close-btn">&times;</button>
+
+            <div class="modal-header">
+                <h2>تواصل معنا</h2>
+                <span class="en-text">Contact Us</span>
+            </div>
+
+            <div class="modal-body">
+                <form class="contact-form" id="modal-contact-form">
+                    <div class="form-group-modal">
+                        <label>الاسم الكامل</label>
+                        <input type="text" placeholder="أدخل اسمك الكامل" required />
+                    </div>
+                    <div class="form-group-modal">
+                        <label>رقم الهاتف</label>
+                        <input type="tel" placeholder="أدخل رقم الهاتف" dir="rtl" required />
+                    </div>
+                    <div class="form-group-modal">
+                        <label>الرسالة</label>
+                        <textarea placeholder="كيف يمكننا مساعدتك؟" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn-modal magnetic-target" data-magnet-speed="0.2">
+                        <span>إرسال الطلب</span>
+                    </button>
+                </form>
+
+                <div class="contact-info-modal">
+                    <div class="info-item-modal">
+                        <h4>العنوان</h4>
+                        <p>بغداد - شارع الزيتون (Al-Zaytoon St)</p>
+                    </div>
+                    <div class="info-item-modal">
+                        <h4>الهاتف</h4>
+                        <p class="en-text">+964 7750008841</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        // Inline script to bypass aggressive browser caching of script.js
+        document.addEventListener('DOMContentLoaded', function() {
+            const qiForm = document.getElementById('qi-registration-form');
+            if (qiForm) {
+                qiForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formTitle = document.getElementById('contact-form-title');
+                    const successState = document.getElementById('qi-success-state');
+                    
+                    qiForm.style.opacity = '0';
+                    qiForm.style.transition = 'opacity 0.4s ease';
+                    if (formTitle) {
+                        formTitle.style.opacity = '0';
+                        formTitle.style.transition = 'opacity 0.4s ease';
+                    }
+                    
+                    setTimeout(() => {
+                        qiForm.style.display = 'none';
+                        if (formTitle) formTitle.style.display = 'none';
+                        successState.style.display = 'flex';
+                        successState.style.transition = 'opacity 0.5s ease';
+                        void successState.offsetWidth;
+                        successState.style.opacity = '1';
+                        successState.classList.add('active');
+                    }, 400);
+                });
+            }
+
+            const mainContactForm = document.getElementById('main-contact-form');
+            if (mainContactForm) {
+                mainContactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const mainTitle = document.getElementById('main-form-title');
+                    const mainSuccessState = document.getElementById('form-success-state');
+                    
+                    mainContactForm.style.opacity = '0';
+                    mainContactForm.style.transition = 'opacity 0.4s ease';
+                    if (mainTitle) {
+                        mainTitle.style.opacity = '0';
+                        mainTitle.style.transition = 'opacity 0.4s ease';
+                    }
+                    
+                    setTimeout(() => {
+                        mainContactForm.style.display = 'none';
+                        if (mainTitle) mainTitle.style.display = 'none';
+                        mainSuccessState.style.display = 'flex';
+                        mainSuccessState.style.transition = 'opacity 0.5s ease';
+                        void mainSuccessState.offsetWidth;
+                        mainSuccessState.style.opacity = '1';
+                        mainSuccessState.classList.add('active');
+                    }, 400);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
